@@ -1,10 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
+    <title>Pfadiheim Feuerpfeil</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom-css.css" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <input type="button" value="Zurück" class="btn btn-light" onclick="window.location.href='index.html'">
+        <a class="navbar-brand" href="index.html">Pfadi Feuerpfeil</a>
+        <img src="img/Feuerpfeillogo.png">
+    </nav>
+</header>
+
+<main role="main" class="other">
+    <div class="container">
+        <h4>Pfadiheim mieten</h4>
+        <form>
+            <div class="form-row">
+                <div class="col">
+                    <label for="vorname">Vorname</label>
+                    <input type="text" class="form-control" id="vorname" placeholder="Vorname">
+                </div>
+                <div class="col">
+                    <label for="nachname">Nachname</label>
+                    <input type="text" class="form-control" id="nachname" placeholder="Nachname">
+                </div>
+            </div>
+            <div class="form-group" style="padding-top: 5%;">
+                <label for="e-mail">E-Mail</label>
+                <input type="email" class="form-control" id="e-mail" placeholder="E-Mail">
+            </div>
+            <button type="submit" class="btn btn-light">Mieten</button>
+        </form>
+    </div>
+</main>
+
+<!-- Bootstrap core JavaScript -->
+<script src="js/datepicker.js"></script>
+<script src="jquery/jquery-3.3.1.slim.min.js"></script>
+<script>window.jQuery || document.write('<script src="jquery/jquery-slim.min.js"><\/script>')</script>
+<script src="js/popper/popper.min.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
 </body>
 </html>

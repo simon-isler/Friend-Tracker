@@ -1,22 +1,33 @@
 body {
     padding-top: 5%;
-    padding-bottom: 3rem;
-}
-
-main {
-    padding-top: 20%;
-}
-
-button {
-    height: 5rem;
-    margin-left: 2%;
-    margin-right: 2%;
+    padding-bottom: 4rem;
 }
 
 img {
     height: 3.5rem;
 }
 
+.index {
+    padding-top: 20%;
+}
+
+.other {
+    padding-top: 10%;
+}
+
+.btn-outline-dark {
+    height: 5rem;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.btn-light {
+    float: right;
+}
+
+.container {
+    margin-top: 5%;
+}
 .navbar-brand {
     position: absolute;
     top: 50%;
