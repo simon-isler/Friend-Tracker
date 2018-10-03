@@ -42,13 +42,26 @@
                 <label for="e-mail">E-Mail</label>
                 <input type="email" class="form-control" id="e-mail" placeholder="E-Mail">
             </div>
+            <div class="form-row">
+                <div class="col">
+                    <label for="datumVon">Von</label>
+                    <input type="datetime-local" class="form-control" id="datumVon" placeholder="von">
+                </div>
+                <div class="col">
+                    <label for="datumBis">Bis</label>
+                    <input type="datetime-local" class="form-control" id="datumBis" placeholder="bis">
+                </div>
+            </div>
+            <div class="form-group" style="padding-top: 5%;">
+                <label for="beschreibung">Beschreibung</label>
+                <textarea class="form-control" id="beschreibung" rows="2"></textarea>
+            </div>
             <button type="submit" class="btn btn-light">Mieten</button>
         </form>
     </div>
 </main>
 
 <!-- Bootstrap core JavaScript -->
-<script src="js/datepicker.js"></script>
 <script src="jquery/jquery-3.3.1.slim.min.js"></script>
 <script>window.jQuery || document.write('<script src="jquery/jquery-slim.min.js"><\/script>')</script>
 <script src="js/popper/popper.min.js"></script>
