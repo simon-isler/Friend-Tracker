@@ -1,17 +1,32 @@
 body {
     padding-top: 5%;
     padding-bottom: 3rem;
-    color: #5a5a5a;
 }
 
 main {
-    padding-top: 15%;
+    padding-top: 20%;
 }
 
 button {
     height: 5rem;
     margin-left: 2%;
     margin-right: 2%;
+}
+
+img {
+    height: 3.5rem;
+}
+
+.navbar-brand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn:hover {
+    color: #fff !important;
+    text-decoration: none;
 }
 
 .bg-dark {
