@@ -12,3 +12,4 @@ function initMap() {
     // Marker beim Pfadiheim
     var marker = new google.maps.Marker({position: pfadiheim, map: map});
 }
+

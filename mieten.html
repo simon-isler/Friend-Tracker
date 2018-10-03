@@ -27,39 +27,58 @@
 <main role="main" class="other">
     <div class="container">
         <h4>Pfadiheim mieten</h4>
-        <form>
-            <div class="form-row">
-                <div class="col">
-                    <label for="vorname">Vorname</label>
-                    <input type="text" class="form-control" id="vorname" placeholder="Vorname">
-                </div>
-                <div class="col">
-                    <label for="nachname">Nachname</label>
-                    <input type="text" class="form-control" id="nachname" placeholder="Nachname">
-                </div>
-            </div>
-            <div class="form-group" style="padding-top: 5%;">
-                <label for="e-mail">E-Mail</label>
-                <input type="email" class="form-control" id="e-mail" placeholder="E-Mail">
+
+        <form data-toggle="validator" role="form">
+            <div class="form-group">
+                <label for="betreff" class="control-label">Betreff</label>
+                <input type="text" class="form-control" id="betreff" placeholder="Betreff" required>
+                <div class="invalid-feedback">Darf nicht leer sein!</div>
             </div>
             <div class="form-row">
                 <div class="col">
-                    <label for="datumVon">Von</label>
-                    <input type="datetime-local" class="form-control" id="datumVon" placeholder="von">
+                    <label for="vorname" class="control-label">Vorname</label>
+                    <input type="text" class="form-control" id="vorname" placeholder="Vorname" required>
                 </div>
                 <div class="col">
-                    <label for="datumBis">Bis</label>
-                    <input type="datetime-local" class="form-control" id="datumBis" placeholder="bis">
+                    <label for="nachname" class="control-label">Nachname</label>
+                    <input type="text" class="form-control" id="nachname" placeholder="Nachname" required>
                 </div>
             </div>
             <div class="form-group" style="padding-top: 5%;">
-                <label for="beschreibung">Beschreibung</label>
-                <textarea class="form-control" id="beschreibung" rows="2"></textarea>
+                <label for="e-mail" class="control-label">E-Mail</label>
+                <input type="email" class="form-control" id="e-mail" placeholder="E-Mail" required>
             </div>
-            <button type="submit" class="btn btn-light">Mieten</button>
+            <div class="form-row">
+                <div class="col">
+                    <label for="startdatum" class="control-label">Startdatum</label>
+                    <input type="date" class="form-control" id="startdatum" placeholder="von" min="" required>
+                </div>
+                <div class="col">
+                    <label for="enddatum" class="control-label">Enddatum</label>
+                    <input type="date" class="form-control" id="enddatum" placeholder="bis" required>
+                </div>
+            </div>
+            <div class="form-row" style="padding-top: 5%;">
+                <div class="col">
+                    <label for="startzeit" class="control-label">Startzeit</label>
+                    <input type="time" class="form-control" id="startzeit" placeholder="13:00" required>
+                </div>
+                <div class="col">
+                    <label for="endzeit" class="control-label">Endzeit</label>
+                    <input type="time" class="form-control" id="endzeit" placeholder="15:00" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-light" onclick="saveRequest();" style="margin-top: 5%;">Mieten</button>
+            </div>
         </form>
+        <br>
+        <p id="ergebnis"></p>
     </div>
 </main>
+
+<!-- own JS -->
+<script src="js/data.js"></script>
 
 <!-- Bootstrap core JavaScript -->
 <script src="jquery/jquery-3.3.1.slim.min.js"></script>
