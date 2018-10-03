@@ -8,6 +8,12 @@ main {
     padding-top: 15%;
 }
 
+button {
+    height: 5rem;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
 .bg-dark {
     background-color: black !important;
 }
