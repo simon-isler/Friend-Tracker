@@ -77,7 +77,7 @@ function addEvent() {
         userService.addUser(betreffTxt, vornameTxt, nachnameTxt, emailTxt, startdatumTxt, enddatumTxt, startzeitTxt, endzeitTxt);
 
         // Verweis zum Belegungsplan
-        location.href = 'belegungsplan.html';
+        window.location.href = 'belegungsplan.html';
     }
 }
 
@@ -89,9 +89,16 @@ function showEvents() {
     if (this._items === []) {
         // keine Daten im localstorage
         document.getElementById('belegungsplan').innerHTML = "Momentan gibt es keine Events!";
-    } else {
-        // Daten sind vorhanden
+    } else {  // Daten sind vorhanden
+        // Initialisieren
+        var items = userService.getUsers();
+        var ausgabe = "";
 
+
+        for (var i = 0; i <= items.length - 1; i++) {
+            ausgabe = ausgabe + items[i].betreff + ": " + items[i].startdatum + " (" + items[i].startzeit + ") - " + items[i].enddatum + " (" + items[i].endzeit + ") <br>";
+        }
+        document.getElementById("belegungsplan").innerHTML = ausgabe;
     }
 }
 
