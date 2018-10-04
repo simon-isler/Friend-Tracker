@@ -15,7 +15,6 @@ class UserService {
 
             // Array leeren
             if (empty === true) {
-                console.log('init empty');
                 localStorage.removeItem(this._NAME); // clear data
                 this._items = [];
                 localStorage.setItem(this._NAME, JSON.stringify(this._items)); // init empty
@@ -27,7 +26,6 @@ class UserService {
                     this._items = []; // clear data
                 }
 
-                console.log('init');
                 console.log(this._items);
             }
         };
@@ -74,15 +72,32 @@ function addEvent() {
 
     // Hinzufügen
     userService.addUser(betreffTxt, vornameTxt, nachnameTxt, emailTxt, startdatumTxt, enddatumTxt, startzeitTxt, endzeitTxt);
+
+    // Anzeige
+    document.getElementById('ergebnis').innerHTML = "Erfolgreich! Vielen Dank für Ihr Interesse!";
 }
 
-// Events löschen
+function showEvents() {
+    // UserService aufrufen
+    var userService = new UserService();
+
+    var data = JSON.stringify(userService.getUsers());
+
+    document.getElementById('belegungsplan').innerHTML = data;
+}
+
+// bestimmte Events löschen
 function remove() {
     // UserService aufrufen
     var userService = new UserService();
 
     // Eingabe mit einem bestimmten Betreff wird gelöscht
     userService.removeUser(document.getElementById('betreff').value);
+}
+
+// alle Events löschen
+function removeAll() {
+    localStorage.clear();
 }
 
 

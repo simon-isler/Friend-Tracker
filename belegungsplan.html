@@ -15,7 +15,7 @@
     <link href="css/custom-css.css" rel="stylesheet">
 </head>
 
-<body>
+<body onload="showEvents();">
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <input type="button" value="Zurück" class="btn btn-light" onclick="window.location.href='index.html'">
@@ -27,6 +27,8 @@
 <main role="main" class="other">
     <div class="container">
         <h4>Pfadiheim Belegungsplan</h4>
+        <br>
+        <div id="belegungsplan"></div>
     </div>
 </main>
 
@@ -38,7 +40,6 @@
 <script src="js/bootstrap/bootstrap.min.js"></script>
 
 <!-- own JS -->
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUR3rEplQ01WE0sdk2Ge6hy7IYbVHzlBI&callback=initMap"></script>
 <script src="js/UserService.js"></script>
 </body>
 </html>
