@@ -66,24 +66,33 @@ function addEvent() {
     var enddatumTxt = document.getElementById('enddatum').value;
     var startzeitTxt = document.getElementById('startzeit').value;
     var endzeitTxt = document.getElementById('endzeit').value;
+    if (betreffTxt !== "")
 
-    // UserService aufrufen
-    var userService = new UserService();
+    // Eingabe überprüfen
+    if (betreffTxt !== "" && vornameTxt !== "" && nachnameTxt !== "" && emailTxt !== "" && startdatumTxt !== "" && enddatumTxt !== "" && startzeitTxt !== "" && endzeitTxt !== "") { // alle Felder sind ausgefüllt
+        // UserService aufrufen
+        var userService = new UserService();
 
-    // Hinzufügen
-    userService.addUser(betreffTxt, vornameTxt, nachnameTxt, emailTxt, startdatumTxt, enddatumTxt, startzeitTxt, endzeitTxt);
+        // Hinzufügen
+        userService.addUser(betreffTxt, vornameTxt, nachnameTxt, emailTxt, startdatumTxt, enddatumTxt, startzeitTxt, endzeitTxt);
 
-    // Anzeige
-    document.getElementById('ergebnis').innerHTML = "Erfolgreich! Vielen Dank für Ihr Interesse!";
+        // Verweis zum Belegungsplan
+        location.href = 'belegungsplan.html';
+    }
 }
 
 function showEvents() {
     // UserService aufrufen
     var userService = new UserService();
 
-    var data = JSON.stringify(userService.getUsers());
+    // Überprüfung
+    if (this._items === []) {
+        // keine Daten im localstorage
+        document.getElementById('belegungsplan').innerHTML = "Momentan gibt es keine Events!";
+    } else {
+        // Daten sind vorhanden
 
-    document.getElementById('belegungsplan').innerHTML = data;
+    }
 }
 
 // bestimmte Events löschen
