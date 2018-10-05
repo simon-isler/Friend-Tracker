@@ -19,8 +19,8 @@ function onDeviceReady() {
 }
 
 // onError Callback receives a PositionError object
-function onError(error) {
-    alert('message: ' + error.message + '\n');
+function onError() {
+    alert('Ihr Standort konnte nicht lokalisiert werden!\n');
 }
 
 //Google Maps aufrufen und darstellen
