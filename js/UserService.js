@@ -94,7 +94,6 @@ function showEvents() {
         var items = userService.getUsers();
         var ausgabe = "";
 
-
         for (var i = 0; i <= items.length - 1; i++) {
             ausgabe = ausgabe + items[i].betreff + ": " + items[i].startdatum + " (" + items[i].startzeit + ") - " + items[i].enddatum + " (" + items[i].endzeit + ") <br>";
         }
